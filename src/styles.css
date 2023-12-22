@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+a {
+    text-decoration: none;
+    color: rgba(50, 50, 50, 1);
+    transition: scale 0.3s;
+}
+
+.position-0 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.lang {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container-btn {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 0;
+}
+.btn-base-01 {
+    margin: 15px 20px;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    display: inline-block;
+    /*overflow: hidden;*/ /*ideia para usar em outra parte*/
+}
+.btn-design-01 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(252, 165, 165, 1);
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: translate(-10%, -20%);
+}
+.btn-design-02 {
+    border: 4px solid rgba(0, 0, 0, 1);
+    position: absolute;
+    z-index: 0;
+}
+
+
+.lang a:hover {
+    scale: 1.1;
+}
+.btn-base-01:hover .btn-design-01 {
+    transform: translate(0%, 0%);
+}
